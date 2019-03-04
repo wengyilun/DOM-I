@@ -106,6 +106,24 @@ let newAnchorEl1 = document.createElement('a')
 newAnchorEl1.textContent = 'Link'
 navList.appendChild(newAnchorEl1)
 
+
 let newAnchorEl2 = document.createElement('a')
 newAnchorEl2.textContent = 'Search'
 navList.prepend(newAnchorEl2)
+
+
+// Stretch - Add button click
+let btn = document.querySelector('.cta-text button')
+
+btn.addEventListener('mouseenter', function(e){
+  document.querySelector('#cta-img').classList.toggle('rotate')
+  document.querySelector('#cta-img').classList.add('zoom')
+})
+
+btn.addEventListener('mouseout', function(e){
+  document.querySelector('#cta-img').classList.toggle('rotate')
+})
+
+btn.addEventListener('click', function(e){
+  newAnchorEl1.classList.add('hilight')
+})
