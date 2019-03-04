@@ -93,3 +93,19 @@ contactChildren[3].textContent = siteContent["contact"]["email"]
 // Get footer 
 let footerTextElement = document.querySelector('footer p')
 footerTextElement.textContent = siteContent["footer"]["copyright"]
+
+
+// Task 3
+// Change the color of the navigation text to be green.
+let anchorNodeList = document.querySelectorAll('nav a')
+anchorNodeList.forEach(function(el){
+  el.style.color = 'green'
+})
+
+let newAnchorEl1 = document.createElement('a')
+newAnchorEl1.textContent = 'Link'
+navList.appendChild(newAnchorEl1)
+
+let newAnchorEl2 = document.createElement('a')
+newAnchorEl2.textContent = 'Search'
+navList.prepend(newAnchorEl2)
