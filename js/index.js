@@ -81,3 +81,11 @@ document.querySelector('.middle-img').src = siteContent["main-content"]["middle-
  textConentListBottom[1].children[1].textContent = siteContent["main-content"]["product-content"]
  textConentListBottom[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
  textConentListBottom[2].children[1].textContent = siteContent["main-content"]["vision-content"]
+
+//Get contact
+let contactElement = document.querySelector('.contact')
+let contactChildren = contactElement.children
+contactChildren[0].textContent = siteContent["contact"]["contact-h4"] 
+contactChildren[1].textContent = siteContent["contact"]["address"] 
+contactChildren[2].textContent = siteContent["contact"]["phone"] 
+contactChildren[3].textContent = siteContent["contact"]["email"] 
