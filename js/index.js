@@ -88,4 +88,8 @@ let contactChildren = contactElement.children
 contactChildren[0].textContent = siteContent["contact"]["contact-h4"] 
 contactChildren[1].textContent = siteContent["contact"]["address"] 
 contactChildren[2].textContent = siteContent["contact"]["phone"] 
-contactChildren[3].textContent = siteContent["contact"]["email"] 
+contactChildren[3].textContent = siteContent["contact"]["email"]
+
+// Get footer 
+let footerTextElement = document.querySelector('footer p')
+footerTextElement.textContent = siteContent["footer"]["copyright"]
