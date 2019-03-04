@@ -56,3 +56,28 @@ let ctaTextElement =  document.querySelector('.cta-text')
  document.querySelector('#cta-img').src =  siteContent["cta"]["img-src"]
  document.querySelector('.cta-text h1').textContent = siteContent["cta"]["h1"]
  document.querySelector('.cta-text button').textContent = siteContent["cta"]["button"]
+
+
+ // Get main-content
+ // top-content
+let mainElement = document.querySelector('.main-content')
+let mainTopContentElement = document.querySelector('.top-content')
+let textConentList = document.querySelectorAll('.main-content > .top-content > .text-content')
+textConentList[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+textConentList[0].children[1].textContent = siteContent["main-content"]["features-content"]
+textConentList[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+textConentList[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+// main-content img
+document.querySelector('.middle-img').src = siteContent["main-content"]["middle-img-src"]
+
+
+ // bottom-content
+ let mainBottomContentElement = document.querySelector('.bottom-content')
+ let textConentListBottom = document.querySelectorAll('.main-content > .bottom-content > .text-content')
+ textConentListBottom[0].children[0].textContent = siteContent["main-content"]["services-h4"]
+ textConentListBottom[0].children[1].textContent = siteContent["main-content"]["services-content"]
+ textConentListBottom[1].children[0].textContent = siteContent["main-content"]["product-h4"]
+ textConentListBottom[1].children[1].textContent = siteContent["main-content"]["product-content"]
+ textConentListBottom[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
+ textConentListBottom[2].children[1].textContent = siteContent["main-content"]["vision-content"]
