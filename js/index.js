@@ -50,4 +50,9 @@ let navItemNames = Object.values(navData)  // Get a value
 for(let i=0; i<navItemNames.length-1; i++){
    navAnchors[i].textContent = navItemNames[i]
 }
-
+// Get cta data
+let ctaElements = document.getElementsByClassName("cta");
+let ctaTextElement =  document.querySelector('.cta-text')
+ document.querySelector('#cta-img').src =  siteContent["cta"]["img-src"]
+ document.querySelector('.cta-text h1').textContent = siteContent["cta"]["h1"]
+ document.querySelector('.cta-text button').textContent = siteContent["cta"]["button"]
