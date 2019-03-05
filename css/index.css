@@ -296,4 +296,22 @@ footer {
     .contact {
         margin: 20px;
     }
+
 }
+
+    /* STRETCH */
+    .hilight{
+        background-color: red !important;
+        transition: all 0.3s ease;
+        color: white;
+        padding:10px;
+    }
+    .zoom{
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+    }
+
+    .rotate{
+        transform: rotate(180deg);
+        transition: all 0.3s ease;
+    }

@@ -40,3 +40,90 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Get Navigation Items
+let navList = document.querySelector('nav') // HTMLElement
+let navData = siteContent["nav"] 
+let navAnchors =  navList.children  // NodeList
+let navItemNames = Object.values(navData)  // Get a value
+
+for(let i=0; i<navItemNames.length-1; i++){
+   navAnchors[i].textContent = navItemNames[i]
+}
+// Get cta data
+let ctaElements = document.getElementsByClassName("cta");
+let ctaTextElement =  document.querySelector('.cta-text')
+ document.querySelector('#cta-img').src =  siteContent["cta"]["img-src"]
+ document.querySelector('.cta-text h1').textContent = siteContent["cta"]["h1"]
+ document.querySelector('.cta-text button').textContent = siteContent["cta"]["button"]
+
+
+ // Get main-content
+ // top-content
+let mainElement = document.querySelector('.main-content')
+let mainTopContentElement = document.querySelector('.top-content')
+let textConentList = document.querySelectorAll('.main-content > .top-content > .text-content')
+textConentList[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+textConentList[0].children[1].textContent = siteContent["main-content"]["features-content"]
+textConentList[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+textConentList[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+// main-content img
+document.querySelector('.middle-img').src = siteContent["main-content"]["middle-img-src"]
+
+
+ // bottom-content
+ let mainBottomContentElement = document.querySelector('.bottom-content')
+ let textConentListBottom = document.querySelectorAll('.main-content > .bottom-content > .text-content')
+ textConentListBottom[0].children[0].textContent = siteContent["main-content"]["services-h4"]
+ textConentListBottom[0].children[1].textContent = siteContent["main-content"]["services-content"]
+ textConentListBottom[1].children[0].textContent = siteContent["main-content"]["product-h4"]
+ textConentListBottom[1].children[1].textContent = siteContent["main-content"]["product-content"]
+ textConentListBottom[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
+ textConentListBottom[2].children[1].textContent = siteContent["main-content"]["vision-content"]
+
+//Get contact
+let contactElement = document.querySelector('.contact')
+let contactChildren = contactElement.children
+contactChildren[0].textContent = siteContent["contact"]["contact-h4"] 
+contactChildren[1].textContent = siteContent["contact"]["address"] 
+contactChildren[2].textContent = siteContent["contact"]["phone"] 
+contactChildren[3].textContent = siteContent["contact"]["email"]
+
+// Get footer 
+let footerTextElement = document.querySelector('footer p')
+footerTextElement.textContent = siteContent["footer"]["copyright"]
+
+
+// Task 3
+// Change the color of the navigation text to be green.
+let anchorNodeList = document.querySelectorAll('nav a')
+anchorNodeList.forEach(function(el){
+  el.style.color = 'green'
+})
+
+let newAnchorEl1 = document.createElement('a')
+newAnchorEl1.textContent = 'Link'
+navList.appendChild(newAnchorEl1)
+
+
+let newAnchorEl2 = document.createElement('a')
+newAnchorEl2.textContent = 'Search'
+navList.prepend(newAnchorEl2)
+
+
+// Stretch - Add button click
+let btn = document.querySelector('.cta-text button')
+
+btn.addEventListener('mouseenter', function(e){
+  document.querySelector('#cta-img').classList.toggle('rotate')
+  document.querySelector('#cta-img').classList.add('zoom')
+})
+
+btn.addEventListener('mouseout', function(e){
+  document.querySelector('#cta-img').classList.toggle('rotate')
+})
+
+btn.addEventListener('click', function(e){
+  newAnchorEl1.classList.add('hilight')
+})
